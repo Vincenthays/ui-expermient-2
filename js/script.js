@@ -17,6 +17,7 @@ $('.modal-content > button').click(() => $('body').removeClass('modal-show'))
 
 // cards
 $('.cards > .card').click(function() {
+    if ($('body').hasClass('sidebar-show')) return
     $(this).siblings('.card').removeClass('card-show-more')
     $(this).toggleClass('card-show-more')
 })
